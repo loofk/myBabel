@@ -15,7 +15,7 @@ function babelTransform (fileName) {
   const code = fs.readFileSync(entryPath, 'utf-8')
 
   const res = transform(`${code}`, {
-    plugins: [require('../plugins/es6.js')]
+    plugins: require('../plugins/index.js')
   })
 
   const outputPath = dist + '/' + fileName
