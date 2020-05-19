@@ -1,0 +1,22 @@
+{
+  "name": "mybabel",
+  "version": "1.0.0",
+  "description": "a simple babel",
+  "main": "index.js",
+  "scripts": {
+    "babel": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loofk/myBabel.git"
+  },
+  "author": "Liu Xiang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/loofk/myBabel/issues"
+  },
+  "homepage": "https://github.com/loofk/myBabel#readme",
+  "devDependencies": {
+    "@babel/core": "^7.9.6"
+  }
+}
