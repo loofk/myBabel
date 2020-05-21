@@ -1,5 +1,9 @@
-import _Array$from from "@babel/runtime-corejs2/core-js/array/from";
-import _instanceof from "@babel/runtime-corejs2/helpers/instanceof";
+import _Array$from from "@babel/runtime-corejs3/core-js-stable/array/from";
+import _includesInstanceProperty from "@babel/runtime-corejs3/core-js-stable/instance/includes";
+import _instanceof from "@babel/runtime-corejs3/helpers/instanceof";
+
+var _context;
+
 var a = 1;
 
 var b = function (a, b) {
@@ -8,11 +12,11 @@ var b = function (a, b) {
 
 _instanceof(a, b);
 
-var c = _Array$from({
+var c = _includesInstanceProperty(_context = _Array$from({
   length: 10
 }, function () {
   return 1;
-})[(1, 2, 3)].includes(1) && console.log('babel-runtime tranformed');
+})[(1, 2, 3)]).call(_context, 1) && console.log('babel-runtime tranformed');
 
 var d = _Array$from({
   length: 10
