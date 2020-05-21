@@ -9,3 +9,8 @@
 - instanceof
 
 待转译文件放在src文件夹内，输出在dist文件夹内
+
+## 使用
+
+    npm i
+    npm run babel

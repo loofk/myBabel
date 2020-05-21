@@ -1,5 +1,5 @@
-function _instanceof(left, right) { if (right != null && typeof Symbol !== "undefined" && right[Symbol.hasInstance]) { return !!right[Symbol.hasInstance](left); } else { return _instanceof(left, right); } }
-
+import _Array$from from "@babel/runtime-corejs2/core-js/array/from";
+import _instanceof from "@babel/runtime-corejs2/helpers/instanceof";
 var a = 1;
 
 var b = function (a, b) {
@@ -7,3 +7,15 @@ var b = function (a, b) {
 };
 
 _instanceof(a, b);
+
+var c = _Array$from({
+  length: 10
+}, function () {
+  return 1;
+})[(1, 2, 3)].includes(1) && console.log('babel-runtime tranformed');
+
+var d = _Array$from({
+  length: 10
+}, function () {
+  return 1;
+});
